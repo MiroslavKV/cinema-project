@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block title %}Schedule of Showtimes{% endblock %}
+
+{% block content %}
+    <h1>Schedule of Showtimes</h1>
+
+    {% if schedules %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Movie</th>
+                    <th>Cinema</th>
+                    <th>Showtime</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for schedule in schedules %}
+                    <tr>
+                        <td>{{ schedule.movie.title }}</td>
+                        <td>{{ schedule.cinema.name }}</td>
+                        <td>{{ schedule.showtime.strftime('%Y-%m-%d %H:%M') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No schedules available.</p>
+    {% endif %}
+    
+    <a href="{{ url_for('movie_list') }}">Return to Movie List</a>
+{% endblock %}

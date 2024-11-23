@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Films</h1>
+<ul>
+    {% for movie in movies %}
+    <li>
+        <h2>{{ movie.title }}</h2>
+        <p>{{ movie.description }}</p>
+        <a href="{{ movie.trailer_url }}">Watch trailer</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
