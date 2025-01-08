@@ -2,12 +2,20 @@
 {% block content %}
 <h1>Films</h1>
 <ul>
-    {% for movie in movies %}
     <li>
-        <h2>{{ movie.title }}</h2>
-        <p>{{ movie.description }}</p>
-        <a href="{{ movie.trailer_url }}">Watch trailer</a>
+        <h2>Kraven the Hunter</h2>
+        <p>Kraven the Hunter is a 2024 American superhero film featuring the Marvel Comics character of the same name. Directed by J. C. Chandor from a screenplay by Richard Wenk, Art Marcum and Matt Holloway, the film stars Aaron Taylor-Johnson in the title role, alongside Ariana DeBose, Fred Hechinger, Alessandro Nivola, Christopher Abbott, and Russell Crowe. Produced by Columbia Pictures in association with Marvel Entertainment, it is the sixth film in Sony's Spider-Man Universe (SSU). The film explores Kraven's relationship with his father and his path to becoming the greatest hunter.</p>
+        <a href="https://www.youtube.com/watch?v=rze8QYwWGMs&ab_channel=SonyPicturesEntertainment">Watch trailer</a>
     </li>
-    {% endfor %}
+    <li>
+        <h2>The Matrix</h2>
+        <p>A science fiction classic by the Wachowskis.</p>
+        <a href="https://www.youtube.com/watch?v=m8e-FF8MsqU">Watch trailer</a>
+    </li>
+    <li>
+        <h2>Avatar</h2>
+        <p>An epic science fiction film by James Cameron.</p>
+        <a href="https://www.youtube.com/watch?v=6ziBFh3V1aM">Watch trailer</a>
+    </li>
 </ul>
 {% endblock %}

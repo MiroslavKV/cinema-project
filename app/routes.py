@@ -5,7 +5,7 @@ from app import app, db
 
 @app.route("/")
 def index():
-    return render_template("movies.html")
+    return render_template("base.html")
 
 @app.route('/movies')
 def movie_list():
@@ -27,4 +27,4 @@ def add_review():
     review = Review(movie_id=movie_id, rating=rating, comment=comment)
     db.session.add(review)
     db.session.commit()
-    return redirect(url_for('movie_list'))
+    return redirect(url_for('review.html'))
